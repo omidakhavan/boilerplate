@@ -8,8 +8,8 @@
  * @link http://tareq.weDevs.com Tareq's Planet
  * @example src/settings-api.php How to use the class
  */
-if ( !class_exists( 'Avma_Settings_Api' ) ):
-class Avma_Settings_Api {
+if ( !class_exists( 'prefix_Settings_Api' ) ):
+class prefix_Settings_Api {
     /**
      * settings sections array
      *

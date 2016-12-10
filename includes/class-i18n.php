@@ -16,7 +16,7 @@
 /**
  * Define the internationalization functionality.
  */
-class Avma_Maintenance_i18n {
+class prefix_Maintenance_i18n {
 
 
 	/**

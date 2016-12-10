@@ -13,7 +13,7 @@
 /**
  * Fired during plugin activation.
  */
-class Avma_Meitenance_Activator {
+class prefix_Meitenance_Activator {
 
 	public static function activate() {
 

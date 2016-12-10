@@ -16,7 +16,7 @@
  * The core plugin class.
  */
 
-class Avma_Maintenance {
+class prefix_Maintenance {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -60,31 +60,31 @@ class Avma_Maintenance {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once AVMA_DIR . 'includes/class-avma-maintenance-loader.php';
+		require_once prefix_DIR . 'includes/class-prefix-maintenance-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once AVMA_DIR . 'includes/class-avma-maintenance-i18n.php';
+		require_once prefix_DIR . 'includes/class-prefix-maintenance-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once AVMA_DIR . 'admin/class-avma-maintenance-admin.php';
+		require_once prefix_DIR . 'admin/class-prefix-maintenance-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once AVMA_DIR . 'public/class-avma-maintenance-public.php';
-		$this->loader = new Avma_Maintenance_loader();
+		require_once prefix_DIR . 'public/class-prefix-maintenance-public.php';
+		$this->loader = new prefix_Maintenance_loader();
 
 		/**
 		 * Call To Option Page Panel
 		 */
-		require_once AVMA_DIR .'admin/includes/class-avma-maintenance-setting.php';
-		new Avma_Settings ;
+		require_once prefix_DIR .'admin/includes/class-prefix-maintenance-setting.php';
+		new prefix_Settings ;
 
 
 	}
@@ -96,7 +96,7 @@ class Avma_Maintenance {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Avma_Maintenance_i18n();
+		$plugin_i18n = new prefix_Maintenance_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -111,7 +111,7 @@ class Avma_Maintenance {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Avma_Maintenance_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new prefix_Maintenance_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );

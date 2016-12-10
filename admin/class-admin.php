@@ -13,7 +13,7 @@
 /**
  * The admin-specific functionality of the plugin.
  */
-class Avma_Maintenance_Admin {
+class prefix_Maintenance_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -42,7 +42,7 @@ class Avma_Maintenance_Admin {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, AVMA_DIR . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, prefix_DIR . 'assets/css/plugin-name-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -53,7 +53,7 @@ class Avma_Maintenance_Admin {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/js/plugin-name-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 

@@ -7,13 +7,13 @@
  */
 
 /**
- * [avma_get_option description]
+ * [prefix_get_option description]
  * @param  [type] $option  [description]
  * @param  [type] $section [description]
  * @param  string $default [description]
  * @return [type]          [description]
  */
-function avma_get_option( $option, $section, $default = '' ) {
+function prefix_get_option( $option, $section, $default = '' ) {
 	if ( empty( $option ) )
 		return;
     $options = get_option( $section );

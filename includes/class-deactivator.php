@@ -14,7 +14,7 @@
  * Fired during plugin deactivation.
  * This class defines all code necessary to run during the plugin's deactivation.
  */
-class Avma_Maintenance_Deactivator {
+class prefix_Maintenance_Deactivator {
 
 	public static function deactivate() {
 

@@ -13,7 +13,7 @@
 /**
  * Register all actions and filters for the plugin.
  */
-class Avma_Maintenance_Loader {
+class prefix_Maintenance_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
