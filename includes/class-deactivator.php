@@ -14,7 +14,7 @@
  * Fired during plugin deactivation.
  * This class defines all code necessary to run during the plugin's deactivation.
  */
-class prefix_Maintenance_Deactivator {
+class class_Deactivator {
 
 	public static function deactivate() {
 

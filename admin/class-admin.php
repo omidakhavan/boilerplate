@@ -13,7 +13,7 @@
 /**
  * The admin-specific functionality of the plugin.
  */
-class prefix_Maintenance_Admin {
+class class_Admin {
 
 	/**
 	 * The ID of this plugin.

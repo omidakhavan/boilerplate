@@ -16,7 +16,7 @@
 /**
  * Define the internationalization functionality.
  */
-class prefix_Maintenance_i18n {
+class class_i18n {
 
 
 	/**
@@ -26,7 +26,7 @@ class prefix_Maintenance_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'avla-maintenance',
+			'textdomain',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

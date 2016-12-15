@@ -12,7 +12,7 @@
 /**
  * The public-facing functionality of the plugin.
  */
-class Plugin_Name_Public {
+class class_Public {
 
 	/**
 	 * The ID of this plugin.

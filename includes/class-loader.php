@@ -13,7 +13,7 @@
 /**
  * Register all actions and filters for the plugin.
  */
-class prefix_Maintenance_Loader {
+class class_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

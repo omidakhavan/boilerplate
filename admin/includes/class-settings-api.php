@@ -9,7 +9,7 @@
  * @example src/settings-api.php How to use the class
  */
 if ( !class_exists( 'prefix_Settings_Api' ) ):
-class prefix_Settings_Api {
+class class_Settings_Api {
     /**
      * settings sections array
      *
@@ -425,9 +425,9 @@ class prefix_Settings_Api {
         ?>
         <script>
             jQuery(document).ready(function($) {
-                jQuery(document).ready(function(){
+
                 $('.example-datepicker').datepicker(); 
-                });
+
                 //Initiate Color Picker
                 $('.wp-color-picker-field').wpColorPicker();
                 // Switches option sections

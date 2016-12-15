@@ -6,10 +6,10 @@
  */
 require_once prefix_DIR . 'admin/includes/class-settings-api.php' ; 
 if ( !class_exists('prefix_Settings' ) ):
-class prefix_Settings {
+class class_Settings {
     private $settings_api;
     function __construct() {
-        $this->settings_api = new prefix_Settings_API;
+        $this->settings_api = new class_Settings_API;
         add_action( 'admin_init', array($this, 'admin_init') );
         add_action( 'admin_menu', array($this, 'admin_menu') );
     }
@@ -21,7 +21,7 @@ class prefix_Settings {
         $this->settings_api->admin_init();
     }
     function admin_menu() {
-        add_menu_page( 'Maintenance Page Plugin ', 'Averta Maintenance', 'delete_posts', 'prefix-maintenace', array($this, 'plugin_page'),'dashicons-welcome-view-site',79
+        add_menu_page( 'My Plugin ', 'My plugin', 'delete_posts', 'prefix-maintenace', array($this, 'plugin_page'),'dashicons-welcome-view-site',79
 );
     }
     function get_settings_sections() {
@@ -36,6 +36,10 @@ class prefix_Settings {
             ),
             array(
                 'id' => 'com_tab',
+                'title' => __( 'Contact Settings', 'avla-maintenance' )
+            ),
+            array(
+                'id' => 'action',
                 'title' => __( 'Contact Settings', 'avla-maintenance' )
             )
         );
@@ -61,7 +65,7 @@ class prefix_Settings {
                     'name'              => 'prefix_notif',
                     'label'             => __( 'Dashboard Notifaction', 'avla-maintenance' ),
                     'desc'              => __( 'Reminder notifaction message appear on dashboard', 'avla-maintenance' ),
-                    'type'              => 'checkbox'
+                    'type'              => 'repeat'
                 ),
                 array(
                     'name'              => 'prefix_exclude',
@@ -278,6 +282,9 @@ class prefix_Settings {
                     'type'              => 'text',
                     'default'           => ''
                 ),
+            ),
+            'action' => array(
+
             )
         );
         return $settings_fields;

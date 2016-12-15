@@ -32,8 +32,8 @@ define( 'prefix_URL', plugins_url( '' , __FILE__ ));
  * This action is documented in includes/class-plugin-name-activator.php
  */
 function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-	Plugin_Name_Activator::activate();
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-activator.php';
+	class_Activator::activate();
 }
 
 /**
@@ -41,18 +41,18 @@ function activate_plugin_name() {
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
 function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-deactivator.php';
+	class_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_prefix-maintenance' );
-register_deactivation_hook( __FILE__, 'deactivate_prefix-maintenance' );
+register_activation_hook( __FILE__, 'activate_plugin_name' );
+register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-prefix-maintenance.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-core.php';
 
 /**
  * Begins execution of the plugin.
@@ -65,7 +65,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-prefix-maintenance.php';
  */
 function run_prefix_maintenance() {
 
-	$plugin = new prefix_maintenance();
+	$plugin = new class_Core();
 	$plugin->run();
 
 }

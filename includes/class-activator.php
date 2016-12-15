@@ -13,7 +13,7 @@
 /**
  * Fired during plugin activation.
  */
-class prefix_Meitenance_Activator {
+class class_Activator {
 
 	public static function activate() {
 
